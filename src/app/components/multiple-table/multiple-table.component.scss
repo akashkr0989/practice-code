@@ -18,6 +18,12 @@
 
 .container {
   padding: 20px;
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   // background-color: aqua;
 }
 
