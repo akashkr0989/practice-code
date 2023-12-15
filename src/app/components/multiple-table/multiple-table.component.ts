@@ -26,7 +26,7 @@ ngOnInit(): void {
 
 private initForm(): void {
   this.multiplicationForm = this.fb.group({
-    number: ['', [Validators.required, Validators.min(1)]]
+    number: ['', [Validators.required, Validators.min(1), Validators.max(100)]]
   });
 }
 
