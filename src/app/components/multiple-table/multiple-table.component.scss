@@ -1,0 +1,94 @@
+// .multiplication-table {
+//   margin-top: 20px;
+//   border-collapse: collapse;
+//   width: 100%;
+// }
+
+// .multiplication-table td {
+//   border: 1px solid #000000;
+//   border-color: solid black;
+//   padding: 8px;
+//   text-align: center;
+// }
+
+// .mat-form-field {
+//   width: 100%;
+//   margin-bottom: 16px;
+// }
+
+// .container {
+//   padding: 20px;
+//   background-color: aqua;
+// }
+
+// mat-form-field {
+//   margin-right: 1.5rem;
+// }
+// input {
+//   height: 50px;
+// }
+
+
+
+
+
+.multiplication-table-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .multiplication-card {
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .multiplication-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .mat-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .mat-table th, .mat-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .mat-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .mat-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .mat-table tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .mat-error {
+    color: #d9534f;
+  }
+  
+  .mat-primary-button {
+    background-color: #2196F3;
+  }
+  
+  .mat-primary-button:hover {
+    background-color: #1565c0;
+  }
+  
+  

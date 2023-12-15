@@ -1,0 +1,59 @@
+<!-- <div class="container">
+    <h1>Welcome to Multiplication Table</h1>
+    
+    <form [formGroup]="multiplicationForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline">
+          <mat-label>Enter a number</mat-label>
+          <input matInput type="number" formControlName="number">
+        </mat-form-field>
+      
+        <button mat-raised-button color="purple" type="submit">Generate Table</button>
+      </form>
+      
+      <table *ngIf="multiplicationTable" class="multiplication-table">
+        <tr *ngFor="let row of multiplicationTable">
+          <td>{{ row[0] }} X {{ row[1] }} = {{ row[2] }}</td>
+        </tr>
+      </table>
+</div> -->
+
+<div class="container">
+    <h1>Welcome to Multiplication Table</h1>
+    <div class="multiplication-table-container">
+        <mat-card class="multiplication-card">
+          <mat-card-header>
+            <mat-card-title>Multiplication Table</mat-card-title>
+          </mat-card-header>
+      
+          <form [formGroup]="multiplicationForm" class="multiplication-form" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="outline">
+              <mat-label>Enter a number</mat-label>
+              <input matInput type="number" formControlName="number">
+              <mat-error *ngIf="multiplicationForm.get('number')?.hasError('required')">Number is required</mat-error>
+              <mat-error *ngIf="multiplicationForm.get('number')?.hasError('min')">Number must be at least 1</mat-error>
+              <mat-error *ngIf="multiplicationForm.get('number')?.hasError('max')">Number must be at most 10</mat-error>
+            </mat-form-field>
+      
+            <button mat-raised-button class="mat-primary-button" type="submit">Generate Table</button>
+          </form>
+      
+          <table *ngIf="multiplicationTable" class="mat-table">
+            <thead>
+              <tr>
+                <th>Multiplicand</th>
+                <th>Multiplier</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of multiplicationTable">
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card>
+      </div>
+      
+</div>
